@@ -118,5 +118,10 @@ def graphql_endpoint(payload: GraphQLRequest):
 
 
 @app.get("/")
-def health():
+def root():
     return {"status": "ok", "books_count": len(BOOKS)}
+
+
+@app.get("/health")
+def health():
+    return {"status": "ok"}
