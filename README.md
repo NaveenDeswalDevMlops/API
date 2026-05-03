@@ -13,15 +13,23 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## Run server
+## Run everything from one main file
 
 ```bash
-uvicorn graphql_server:app --reload
+python main.py demo
+```
+
+This single command starts the GraphQL server and runs the CRUD client flow (create/get/update/list/delete).
+
+## Run only server (optional)
+
+```bash
+python main.py serve
 ```
 
 GraphQL endpoint: `http://127.0.0.1:8000/graphql`
 
-## Run client
+## Run only client (optional)
 
 ```bash
 python graphql_client.py
